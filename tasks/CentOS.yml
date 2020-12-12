@@ -1,0 +1,5 @@
+---
+# Example installation
+- name: install vim
+  yum:
+    name: vim

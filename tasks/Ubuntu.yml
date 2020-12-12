@@ -1,0 +1,6 @@
+---
+# example installation
+- name: install vim
+  apt:
+    name: vim
+    update_cache: true

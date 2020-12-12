@@ -1,0 +1,60 @@
+[{{ role_name }}](#{{ role_name }})
+=========
+
+![CI](https://github.com/tstechly/ansible-role-{{ role_name }}/workflows/CI/badge.svg)
+
+Install and configure {{ role_name }}
+
+Example Playbook
+----------------
+
+```
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: tstechly.{{ role_name }}```
+```
+
+Requirements
+------------
+
+
+Role Variables
+--------------
+
+These variables are set in `defaults/main.yml`:
+```yaml
+---
+# defaults file for {{ role_name }}```
+
+
+Compatibility
+-------------
+
+CentOS, Ubuntu, MacOS
+
+
+Testing
+-------
+
+[Molecule](https://github.com/ansible/molecule)
+
+
+```
+molecule test
+```
+
+License
+-------
+
+MIT
+
+
+Author Information
+------------------
+
+[Tomasz Stechly](@tstechly)

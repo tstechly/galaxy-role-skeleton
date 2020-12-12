@@ -1,0 +1,16 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+  pre_tasks:
+    # usual initialization for debian systems
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
+    - name: install gpg agent
+      apt:
+        name: gpg-agent
+      when: ansible_os_family == 'Debian'
+      changed_when: false
