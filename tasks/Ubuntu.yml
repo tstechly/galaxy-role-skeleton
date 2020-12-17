@@ -1,6 +1,6 @@
 ---
 # example installation
-- name: install vim
+- name: install wget
   apt:
-    name: vim
+    name: wget
     update_cache: true

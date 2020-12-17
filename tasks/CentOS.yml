@@ -1,5 +1,5 @@
 ---
 # Example installation
-- name: install vim
+- name: install wget
   yum:
-    name: vim
+    name: wget
